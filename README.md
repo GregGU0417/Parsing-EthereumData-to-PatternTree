@@ -1,5 +1,5 @@
 # Parsing-EthereumData-to-PatternTree
-This project parse transaction on Ethereum to a Pattern Tree, which is a data frame that could be used for future Data analytics and Visualization. The ultimate goal is to help trader on DeFi have better understanding on the transaction.
+This project parse transaction on Ethereum to a Pattern Tree, which is a data frame that could be used for future Data analytics and Visualization. The ultimate goal is to help DeFi trader have better understanding on the transaction.
 ## What is Pattern Parsing Tree
 ### What is Pattern
 - The pattern is a series of Transfer/Mint/Burn inside a transaction that has some unique meaning and can be mapped to some part of the transaction.
