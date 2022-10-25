@@ -9,8 +9,9 @@
 - The pattern is a series of Transfer/Mint/Burn inside a transaction that has some unique meaning and can be mapped to some part of the transaction.
 - Example Pattern:
 <p align="center">
-<img src="https://github.com/GregGU0417/Parsing-EthereumData-to-PatternTree/blob/main/image-10.png" align="center" width="200" height="300">
+  <img src="https://github.com/GregGU0417/Parsing-EthereumData-to-PatternTree/blob/main/image-10.png" width="200" height="300">
 </p>
+
 - To see our patterns, sample transactions, and our notes, please visit: TBD (the website is under development)
 - To access the  Pattern Database on MongoDB(like wanting to add notes or sample transactions to patterns), please contact Greg Gu (bowengu2@illinois.edu) 
 ## How Pattern is Mapped to Transaction
