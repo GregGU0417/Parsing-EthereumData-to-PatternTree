@@ -8,7 +8,9 @@
 ### What is Pattern
 - The pattern is a series of Transfer/Mint/Burn inside a transaction that has some unique meaning and can be mapped to some part of the transaction.
 - Example Pattern:
-
+<p align="center">
+<img src="https://github.com/GregGU0417/Parsing-EthereumData-to-PatternTree/blob/main/image-10.png" align="center" width="200" height="300">
+</p>
 - To see our patterns, sample transactions, and our notes, please visit: TBD (the website is under development)
 - To access the  Pattern Database on MongoDB(like wanting to add notes or sample transactions to patterns), please contact Greg Gu (bowengu2@illinois.edu) 
 ## How Pattern is Mapped to Transaction
@@ -74,7 +76,7 @@ example
 - Note: We do not consider the mint/burn of platform tokens. In the case of Ethereum, we treat ETH and WETH equally
 - Example: 
 - TxHash: 0x2cf98dd2609ffe224ce81d4f60a759b36f868aca757592653d4abff2abdcd61a
-
+![Image text](https://github.com/GregGU0417/Parsing-EthereumData-to-PatternTree/blob/main/image-7.png)
 ### Tree Pruning
 - Trim unnecessary branches
 - If a subtree of a graph does not have any events that are effective transfer/mint/burn, then trim these branches
@@ -85,7 +87,7 @@ example
   - Note: You can also use `get_effective_nodes(simplify_tree)` to get the list of nodes in the Pruning Tree
 - Example : (same transaction as above)
 - TxHash: 0x2cf98dd2609ffe224ce81d4f60a759b36f868aca757592653d4abff2abdcd61a
-
+![Image text](https://github.com/GregGU0417/Parsing-EthereumData-to-PatternTree/blob/main/image-8.png)
 ### Pattern matching
 - We have around 600+ patterns in our database at this time. I will map the subtree of the pruning tree with a certain pattern in the list.
 - The algorithm I use is multi-directed graph isomorphism on capital flow path and pattern, also 1-1 mapping on token matching. I am also using the amount check on the number of token transfer/mint/burn and NFT transfer /mint/burn to accelerate the process. If you have any better algorithms to solve the problem, please contact me(Greg Gu) at bowengu2@illinois.edu
@@ -111,5 +113,5 @@ example
  ```
 - Example result:
 - TxHash: 0x2cf98dd2609ffe224ce81d4f60a759b36f868aca757592653d4abff2abdcd61a
- 
+![Image text](https://github.com/GregGU0417/Parsing-EthereumData-to-PatternTree/blob/main/image-9.png)
 
