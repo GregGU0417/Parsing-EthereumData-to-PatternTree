@@ -112,12 +112,27 @@ example
  {'node': 'transfer_T0_1_2/transfer_T3_2_1', 'degree': '0-1'},
  {'node': 'empty', 'degree': '0'}]
  ```
- - discrptive_pattern_list
+- discirptive_pattern_list: a list of dictionary with mapping detail
   - node : empty/some pattern/undiscovered pattern
   - degree : store the parsing tree structure
   - address_mapping: mapping the pattern sample and contract address
   - token_mapping: mapping the pattern sample and token address
   - nft_mapping: mapping the pattern sample and nft address
+ ```
+ '''
+ example
+ '''
+ {'node': 'transfer_T0_1_2/burn_T3_2/transfer_T4_5_2/transfer_T4_2_1',
+  'degree': '0-0',
+  'address_mapping': {'Burn': 'Burn',
+   'Mint': 'Mint',
+   '5': '0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7',
+   '2': '0xed279fdd11ca84beef15af5d39bb4d4bee23f0ca',
+   '1': '0xd8c07491caa1edf960db3ceff387426d53942ea0'},
+  'token_mapping': {'T3': ['0x6c3f90f043a72fa612cbac8115ee7e52bde6e490'],
+   'T0': ['0x5f98805a4e8be255a32880fdec7f6728c6568ba0'],
+   'T4': ['0x6b175474e89094c44da98b954eedeac495271d0f']}
+ ```
 - Example result:
 - TxHash: 0x2cf98dd2609ffe224ce81d4f60a759b36f868aca757592653d4abff2abdcd61a
 ![Image text](https://github.com/GregGU0417/Parsing-EthereumData-to-PatternTree/blob/main/image-9.png)
