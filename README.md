@@ -1,7 +1,7 @@
 # Parsing-EthereumData-to-PatternTree
 ## Introduction
 - This project parse transaction on Ethereum to a Pattern Tree, which is a data frame that could be used for future Data analytics and Visualization. The ultimate goal is to help DeFi trader have better understanding on the transaction.
-- I build this project during my internship at EigenPhi, comprehensive DeFi data platform that tracks and analyzes MEV (Maximal Extractable Value). 
+- I build this project during my internship at EigenPhi, comprehensive DeFi data platform that tracks and analyzes MEV (Maximal Extractable Value). The project is supervised by Zhupeng Han and my mentor Chen Wei
 - I am also collaborating with Xuanyi Wu to build a website to visualize the the pattern parsing tree
 
 ## What is Pattern Parsing Tree
