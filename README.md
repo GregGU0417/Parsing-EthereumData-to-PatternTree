@@ -112,6 +112,12 @@ example
  {'node': 'transfer_T0_1_2/transfer_T3_2_1', 'degree': '0-1'},
  {'node': 'empty', 'degree': '0'}]
  ```
+ - discrptive_pattern_list
+  - node : empty/some pattern/undiscovered pattern
+  - degree : store the parsing tree structure
+  - address_mapping: mapping the pattern sample and contract address
+  - token_mapping: mapping the pattern sample and token address
+  - nft_mapping: mapping the pattern sample and nft address
 - Example result:
 - TxHash: 0x2cf98dd2609ffe224ce81d4f60a759b36f868aca757592653d4abff2abdcd61a
 ![Image text](https://github.com/GregGU0417/Parsing-EthereumData-to-PatternTree/blob/main/image-9.png)
