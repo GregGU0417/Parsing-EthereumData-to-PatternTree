@@ -423,7 +423,8 @@ class PatternTreeParsing:
                         #count+=1
                         #this_degree=degree+"-"+str(count)
                         #viewpoint=list_of_parsing[node]["from"]
-                        pattern_structure_list.append({"node":"undiscover_pattern","degree":degree})
+                        content_list=self.get_content(list_of_parsing,simplify_tree,node)
+                        pattern_structure_list.append({"node":"undiscover_pattern","degree":degree,"length":len(content_list)})
                         return True
         pattern_subtree_generation(pattern_list,list_of_parsing,simplify_tree,0,degree="0")
         return pattern_structure_list
@@ -612,7 +613,8 @@ class PatternTreeParsing:
                         # count+=1
                         # this_degree=degree+"-"+str(count)
                         # viewpoint=list_of_parsing[node]["from"]
-                        pattern_structure_list.append({"node": "undiscover_pattern", "degree": degree})
+                        content_list = self.get_content(list_of_parsing, simplify_tree, node)
+                        pattern_structure_list.append({"node": "undiscover_pattern", "degree": degree,"length":len(content_list),"cotent":content_list})
                         return True
 
         discriptive_pattern_subtree_generation(pattern_list, list_of_parsing, simplify_tree, 0, degree="0")
