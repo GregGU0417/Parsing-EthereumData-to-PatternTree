@@ -2,7 +2,8 @@
 ## Introduction
 - This project parse transaction on Ethereum to a Pattern Tree, which is a data frame that could be used for future Data analytics and Visualization. The ultimate goal is to help DeFi trader have better understanding on the transaction.
 - I build this project during my internship at EigenPhi, comprehensive DeFi data platform that tracks and analyzes MEV (Maximal Extractable Value). The project is supervised by Zhupeng Han and my mentor Chen Wei
-- I am also collaborating with Xuanyi Wu to build a website to visualize the the pattern parsing tree
+- I am also collaborating with Xuanyi Wu to build a website to visualize the the pattern parsing tree. This is a tool that can help you analysze any transaction on Ethereum.
+- You can find it here: https://alpha-pattern-tree.eigenphi.io/
 
 ## What is Pattern Parsing Tree
 ### What is Pattern
@@ -12,17 +13,16 @@
   <img src="https://github.com/GregGU0417/Parsing-EthereumData-to-PatternTree/blob/main/image-10.png" width="200" height="300">
 </p>
 
-- To see our patterns, sample transactions, and our notes, please visit: TBD (the website is under development)
+- - To see our patterns, sample transactions, and our notes, please visit: https://alpha-pattern-tree.eigenphi.io/gallary
 - To access the  Pattern Database on MongoDB(like wanting to add notes or sample transactions to patterns), please contact Greg Gu (bowengu2@illinois.edu) 
 ## How Pattern is Mapped to Transaction
 - We match the pattern with the subtree of the call stack tree of a transaction. If the union of events in the subtree is the same as the pattern, the pattern will be mapped to the subtree. To clarify, both the graph Isomorphism and 1-1 mapping on the token are required for pattern match. 
 - The pattern is organized in a tree structure that keeps its contract-calling relationship. We name the result **Pattern Parsing Tree** or **Pattern Tree**.
 ## Why use Pattern Parsing Tree
 - You can see the pattern parsing process as **Feature Engineering** in the original tree structure of Ethereum data. It can help professional Defi traders understand complex transactions.
-- We find out that many of the patterns are connected with specific protocols (Ex: AAVE and Uniswap)
-- We believe that many of the specific types of complex transactions on the blockchain, especially those related to MEV (Maximal Extractable Value), might be mapped to some structure of the Pattern Tree. For example, Arbitrage, Liquidation, Collectrual Swap, and Flashloan... We are searching for the relationships, and more results will be published soon.
-- We also expect that the pattern tree can help us analyze the relationship between different transactions (ex: Sandwich Attack)
-
+- We find out that many of the patterns are connected with specific protocols (Ex: AAVE and Uniswap). We are using the pattern tree to find relationship between different address related to some specific protocals.
+- We believe that many of the specific types of complex transactions on the blockchain, especially those related to MEV (Maximal Extractable Value), might be mapped to some structure of the Pattern Tree. For example, Arbitrage, Liquidation, Collectrual Swap, and Flashloan... We are using the result of pattern parsing tree to build a claasifier.
+- We also using the result of pattern tree to cluster different types of transcation. And analyze some intersting feature like the likelihood of being attack by MEV bot for each cluster.
 ## What does the data input look like
 - We use customized call stack API
 - You get the data by using  the JSON_RPC API by making curl requests to an Ethereum node. Examples are provided below.
